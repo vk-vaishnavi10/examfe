@@ -35,7 +35,8 @@ const UserRegister = () => {
 
     let jwtToken;
 
-    fetch("http://localhost:8080/api/user/register", {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/user/register`, 
+      {
       method: "POST",
       headers: {
         Accept: "application/json",
