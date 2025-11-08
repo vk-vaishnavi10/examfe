@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+const BACKEND_URL = "http://localhost:30083";
+
 
 const UserRegister = () => {
   const navigate = useNavigate();
@@ -35,7 +37,8 @@ const UserRegister = () => {
 
     let jwtToken;
 
-    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/user/register`, 
+    fetch("http://localhost:30083/api/user/register", 
+
       {
       method: "POST",
       headers: {
